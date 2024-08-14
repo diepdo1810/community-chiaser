@@ -11,7 +11,6 @@ type TextInputsProps = {
   textInputs: {
     title: string;
     body: string;
-    placeholder: string;
   };
   onChange: (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -41,7 +40,7 @@ const TextInputs: React.FC<TextInputsProps> = ({
       {/* Title  of the post*/}
       <Input
         name="title"
-        placeholder={textInputs.placeholder}
+        placeholder="Title"
         value={textInputs.title}
         onChange={onChange}
         fontSize="10pt"

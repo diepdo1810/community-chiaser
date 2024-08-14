@@ -343,12 +343,10 @@ const PostBody: React.FC<PostBodyProps> = ({
   }
 
   return (
-    console.log(textInputss),
     <Flex p={4}>
       {/* Display the correct form based on the selected tab */}
       {selectedTab === "Post" && (
         <TextInputs
-          placeholder="111"
           textInputs={textInputs}
           handleCreatePost={handleCreatePost}
           onChange={onTextChange}

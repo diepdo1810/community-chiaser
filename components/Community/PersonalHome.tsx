@@ -22,7 +22,7 @@ const PersonalHome: React.FC = () => {
     showMore: () => {
       const description = document.getElementById("description");
       if (description) {
-        description.style.WebkitLineClamp = "unset";
+        description.style.webkitLineClamp = "unset";
       }
       const showMoreBtn = document.getElementById("showMoreBtn");
       const showLessBtn = document.getElementById("showLessBtn");
@@ -39,7 +39,7 @@ const PersonalHome: React.FC = () => {
     showLess: () => {
       const description = document.getElementById("description");
       if (description) {
-        description.style.WebkitLineClamp = "4";
+        description.style.webkitLineClamp = "4";
       }
       const showMoreBtn = document.getElementById("showMoreBtn");
       const showLessBtn = document.getElementById("showLessBtn");
