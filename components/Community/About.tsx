@@ -55,7 +55,7 @@ const About: React.FC<AboutProps> = ({ communityData }) => {
               router.push(`/community/${communityData.id}/submit`);
             }}
           >
-            Create Post
+            Tạo bài đăng
           </Button>
           <AdminSectionAbout communityData={communityData} />
         </Stack>
@@ -88,7 +88,7 @@ const AboutHeaderBar: React.FC<AboutHeaderBarProps> = ({ communityName }) => (
     borderRadius="10px 10px 0px 0px"
   >
     <Text fontSize="10pt" fontWeight={700}>
-      About {communityName}
+      {communityName}
     </Text>
     <Icon as={HiOutlineDotsHorizontal} />
   </Flex>
@@ -110,17 +110,17 @@ const AboutCommunity: React.FC<AboutCommunityProps> = ({ communityData }) => (
   <Flex width="100%" p={2} fontSize="10pt">
     <Flex direction="column" flexGrow={1}>
       {/* number of subscribers and date created */}
-      <Text fontWeight={700}>Subscribers</Text>
+      <Text fontWeight={700}>Người đăng ký</Text>
       <Text>{communityData.numberOfMembers.toLocaleString()}</Text>
     </Flex>
 
     {/* when the community was created */}
     <Flex direction="column" flexGrow={1}>
-      <Text fontWeight={700}>Created</Text>
+      <Text fontWeight={700}>Ngày Tạo</Text>
       <Text>
         {communityData.createdAt &&
           moment(new Date(communityData.createdAt.seconds * 1000)).format(
-            "MMM DD, YYYY"
+            "DD/MM/YYYY"
           )}
       </Text>
     </Flex>
@@ -160,7 +160,7 @@ const AdminSectionAbout: React.FC<AdminSectionAboutProps> = ({
               variant={"outline"}
               onClick={() => setCommunitySettingsModalOpen(true)}
             >
-              Community Settings
+              Cài đặt cộng đồng
             </Button>
           )}
         </>

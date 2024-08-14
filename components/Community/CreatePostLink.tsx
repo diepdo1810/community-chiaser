@@ -31,7 +31,7 @@ const CreatePostLink: React.FC<CreatePostProps> = () => {
       <Icon as={IoIosCreate} fontSize={36} color="gray.300" mr={4} />
       {/* Input for creating a new post */}
       <Input
-        placeholder="Create Post"
+        placeholder="Tạo bài đăng"
         fontSize="10pt"
         _placeholder={{ color: "gray.500" }}
         _hover={{

@@ -157,7 +157,7 @@ const CommunityItemButtonMembersSection = ({
           onJoinOrLeaveCommunity(community, isJoined);
         }}
       >
-        {isJoined ? "Unsubscribe" : "Subscribe"}
+        {isJoined ? "Hủy đăng ký" : "Đăng ký"}
       </Button>
     </Stack>
   );

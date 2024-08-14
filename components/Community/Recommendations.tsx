@@ -69,7 +69,7 @@ const SuggestionsHeader: React.FC = () => {
       bgGradient="linear-gradient(to bottom, rgba(139, 0, 0, 0), rgba(139, 0, 0, 0.75)),
         url('/images/banners/large.png')"
     >
-      Top Communities
+      Những cộng đồng nổi bật
     </Flex>
   );
 };
@@ -190,7 +190,7 @@ const SuggestedCommunitiesList: React.FC = () => {
                         onJoinOrLeaveCommunity(item, isJoined);
                       }}
                     >
-                      {isJoined ? "Unsubscribe" : "Subscribe"}
+                      {isJoined ? "Hủy đăng ký" : "Đăng ký"}
                     </Button>
                   </Box>
                 </Flex>
@@ -207,7 +207,7 @@ const SuggestedCommunitiesList: React.FC = () => {
             router.push(`/communities`);
           }}
         >
-          View All
+          Xem tất cả
         </Button>
       </Box>
     </Flex>

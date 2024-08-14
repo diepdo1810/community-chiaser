@@ -154,7 +154,7 @@ export const JoinOrLeaveButton: React.FC<JoinOrLeaveButtonProps> = ({
       shadow="md"
       width="120px"
     >
-      {isJoined ? "Unsubscribe" : "Subscribe"}
+      {isJoined ? "Hủy đăng ký" : "Đăng ký"}
     </Button>
   );
 };

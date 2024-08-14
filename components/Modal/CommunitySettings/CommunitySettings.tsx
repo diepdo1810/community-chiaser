@@ -320,7 +320,7 @@ const CommunitySettingsModal: React.FC<CommunitySettingsModalProps> = ({
             padding={3}
             textAlign="center"
           >
-            Community Settings
+            Cài đặt cộng đồng
           </ModalHeader>
           <Box>
             <ModalCloseButton />
@@ -382,7 +382,7 @@ const CommunitySettingsModal: React.FC<CommunitySettingsModalProps> = ({
                         onClick={() => setDeleteImage(true)}
                         isDisabled={deleteImage}
                       >
-                        Delete Image
+                        Xóa hình ảnh
                       </Button>
                     )}
 
@@ -393,7 +393,7 @@ const CommunitySettingsModal: React.FC<CommunitySettingsModalProps> = ({
                   <Flex direction="column">
                     <Stack spacing={2} direction="column" flexGrow={1}>
                       <Text fontWeight={600} fontSize="12pt" color="gray.500">
-                        Community Type
+                        Loại cộng đồng
                       </Text>
                       <Text fontWeight={500} fontSize="10pt" color="gray.500">
                         {`Currently ${communityStateValue.currentCommunity?.privacyType}`}
@@ -404,9 +404,9 @@ const CommunitySettingsModal: React.FC<CommunitySettingsModalProps> = ({
                         mt={2}
                         onChange={handlePrivacyTypeChange}
                       >
-                        <option value="public">Public</option>
-                        <option value="restricted">Restricted</option>
-                        <option value="private">Private</option>
+                        <option value="public">Công khai</option>
+                        <option value="restricted">Hạn chế</option>
+                        <option value="private">Riêng tư</option>
                       </Select>
                     </Stack>
                   </Flex>

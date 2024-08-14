@@ -29,7 +29,7 @@ const SubmitPostPage: React.FC = () => {
       <>
         <Box p="14px 0px">
           <Text fontSize="20pt" fontWeight={700} color="black">
-            Create Post
+            Tạo bài đăng
           </Text>
         </Box>
         {user ? (

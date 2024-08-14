@@ -38,7 +38,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
       {isAdmin() && (
       <CustomMenuButton
         icon={<GrAdd />}
-        text="Create Community"
+        text="Tạo cộng đồng"
         onClick={() => {
           setOpen(true);
           toggleMenuOpen();
@@ -48,7 +48,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
 
       <CustomMenuButton
         icon={<BsFillPeopleFill />}
-        text="View All Communities"
+        text="Xem tất cả cộng đồng"
         onClick={() => {
           router.push("/communities");
           toggleMenuOpen();
@@ -57,7 +57,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
 
       <Box>
         <Text pl={3} mb={1} fontSize="7pt" fontWeight={500} color="gray.500">
-          PRIVILEGED
+          ĐẶC QUYỀN
         </Text>
         {mySnippets
           .filter((snippet) => snippet.isAdmin)
@@ -75,7 +75,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
 
       <Box>
         <Text pl={3} mb={1} fontSize="7pt" fontWeight={500} color="gray.500">
-          SUBSCRIBED COMMUNITIES
+          CỘNG ĐỒNG ĐĂNG KÝ
         </Text>
         {mySnippets.map((snippet) => (
           <MenuListItem

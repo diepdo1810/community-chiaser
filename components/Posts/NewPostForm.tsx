@@ -137,7 +137,7 @@ const NewPostForm: React.FC<NewPostFormProps> = ({
       }
       router.push(communityLink); // redirect user back to communities page after post is created
     } catch (error: any) {
-      console.log("Error: handleCreatePost", error.message);
+      console.error("Error: handleCreatePost", error.message);
       showToast({
         title: "Post not Created",
         description: "There was an error creating your post",
@@ -268,7 +268,7 @@ const BackToCommunityButton: React.FC<BackToCommunityButtonProps> = ({
       onClick={() => router.push(communityLink)}
     >
       <Icon as={MdOutlineArrowBackIos} mr={2} />
-      {`Back to ${communityId}`}
+      {`Quay lại ${communityId}`}
     </Button>
   );
 };
@@ -333,11 +333,22 @@ const PostBody: React.FC<PostBodyProps> = ({
   setSelectedTab,
   setSelectedFile,
 }) => {
+  const router = useRouter();
+  const communityId = router.query.communityId as string;
+  let textInputss = '';
+  switch (communityId) {
+    case "Vạch lá tìm sâu 🐛":
+      textInputss = "Vạch lá tìm sâu 🐛";
+      break;
+  }
+
   return (
+    console.log(textInputss),
     <Flex p={4}>
       {/* Display the correct form based on the selected tab */}
       {selectedTab === "Post" && (
         <TextInputs
+          placeholder="111"
           textInputs={textInputs}
           handleCreatePost={handleCreatePost}
           onChange={onTextChange}

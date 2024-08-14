@@ -35,20 +35,20 @@ const COMMUNITY_TYPE_OPTIONS = [
   {
     name: "public",
     icon: BsFillPersonFill,
-    label: "Public",
-    description: "Everyone can view and post",
+    label: "Công khai",
+    description: "Mọi người đều có thể xem và đăng",
   },
   {
     name: "restricted",
     icon: BsFillEyeFill,
-    label: "Restricted",
-    description: "Everyone can view but only subscribers can post",
+    label: "Hạn chế",
+    description: "Mọi người đều có thể xem nhưng chỉ người đăng ký mới có thể đăng bài",
   },
   {
     name: "private",
     icon: HiLockClosed,
-    label: "Private",
-    description: "Only subscribers can view and post",
+    label: "Riêng tư",
+    description: "Chỉ người đăng ký mới có thể xem và đăng bài",
   },
 ];
 
@@ -213,7 +213,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
             padding={3}
             textAlign="center"
           >
-            Create Community
+            Tạo cộng đồng
           </ModalHeader>
           <Box pl={3} pr={3}>
             <ModalCloseButton />
@@ -226,7 +226,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
               />
               <Box mt={4} mb={4}>
                 <Text fontWeight={600} fontSize={15}>
-                  Community Type
+                Loại cộng đồng
                 </Text>
 
                 <CommunityTypeOptions
@@ -254,7 +254,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
                 onClick={handleCreateCommunity}
                 isLoading={loading}
               >
-                Create Community
+                Tạo cộng đồng
               </Button>
             </Stack>
           </ModalFooter>
@@ -401,10 +401,10 @@ const CommunityNameSection: React.FC<CommunityNameSectionProps> = ({
   return (
     <Box>
       <Text fontWeight={600} fontSize={15}>
-        Name
+        Tên
       </Text>
       <Text fontSize={11} color="gray.500">
-        Community names cannot be changed
+        Tên cộng đồng không thể thay đổi
       </Text>
       <Input
         mt={2}
@@ -431,7 +431,7 @@ const CommunityNameSection: React.FC<CommunityNameSectionProps> = ({
       >
         {/* Updates the remaining characters in real time
         The colour changes to red if the limit is hit */}
-        {charRemaining} Characters remaining
+        {charRemaining} Ký tự còn lại
       </Text>
       <Text fontSize="9pt" color="red" pt={1}>
         {error}
