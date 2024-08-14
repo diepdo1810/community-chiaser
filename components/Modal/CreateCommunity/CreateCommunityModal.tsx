@@ -134,11 +134,11 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
   const handleCreateCommunity = async () => {
     if (error) setError("");
     // prevents community from being created if it has special characters
-    const format: RegExp = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    if (format.test(communityName)) {
-      setError("Community name can only contain letters and numbers");
-      return;
-    }
+    // const format: RegExp = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    // if (format.test(communityName)) {
+    //   setError("Community name can only contain letters and numbers");
+    //   return;
+    // }
     // prevents community from being created if its too short
     if (communityName.length < 3) {
       setError("Community name must be at least 3 characters long");

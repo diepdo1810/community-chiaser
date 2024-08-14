@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "discussion-platform-1f849"
-  }
+    "default": "next-discussion-platform-7914a",
+    "next discussion": "next-discussion-platform-7914a"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

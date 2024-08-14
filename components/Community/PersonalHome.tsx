@@ -4,6 +4,7 @@ import { Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import CreateCommunityModal from "../Modal/CreateCommunity/CreateCommunityModal";
+import { isAdmin } from "../utils/authUtils";
 
 /**
  * Component for displaying card for creating a new community or post.
@@ -56,13 +57,15 @@ const PersonalHome: React.FC = () => {
             <Button height="30px" onClick={onClick}>
               Create Post
             </Button>
-            <Button
-              variant="outline"
-              height="30px"
-              onClick={() => setOpen(true)}
-            >
-              Create Community
-            </Button>
+            {isAdmin() && (
+              <Button
+                variant="outline"
+                height="30px"
+                onClick={() => setOpen(true)}
+              >
+                Create Community
+              </Button>
+            )}
           </Stack>
         </Flex>
       </Flex>

@@ -10,6 +10,7 @@ import { GrAdd } from "react-icons/gr";
 import { IoPeopleCircleOutline } from "react-icons/io5";
 import { useRecoilValue } from "recoil";
 import MenuListItem from "./MenuListItem";
+import { isAdmin } from "../../utils/authUtils";
 
 type CommunitiesProps = {};
 
@@ -33,7 +34,8 @@ const Communities: React.FC<CommunitiesProps> = () => {
     <>
       {/* Sets the state of the community creation modal to true which opens the modal */}
       <CreateCommunityModal open={open} handleClose={() => setOpen(false)} />
-
+    
+      {isAdmin() && (
       <CustomMenuButton
         icon={<GrAdd />}
         text="Create Community"
@@ -42,6 +44,7 @@ const Communities: React.FC<CommunitiesProps> = () => {
           toggleMenuOpen();
         }}
       />
+      )}
 
       <CustomMenuButton
         icon={<BsFillPeopleFill />}

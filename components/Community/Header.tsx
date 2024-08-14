@@ -9,6 +9,7 @@ import { auth } from "@/firebase/clientApp";
 import { FiSettings } from "react-icons/fi";
 import IconItem from "../atoms/Icon";
 import CommunitySettingsModal from "../Modal/CommunitySettings/CommunitySettings";
+import { isAdmin } from "../utils/authUtils";
 
 /**
  * @param {communityData} - data required to be displayed
@@ -180,12 +181,14 @@ export const CommunitySettings: React.FC<CommunitySettingsProps> = ({
             handleClose={() => setCommunitySettingsModalOpen(false)}
             communityData={communityData}
           />
+          {isAdmin() && (
           <IconItem
             icon={FiSettings}
             fontSize={20}
             onClick={() => setCommunitySettingsModalOpen(true)}
             iconColor="gray.500"
           />
+          )}
         </>
       )}
     </>

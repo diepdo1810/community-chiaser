@@ -1,13 +1,14 @@
 import { Community } from "@/atoms/communitiesAtom";
 import { auth } from "@/firebase/clientApp";
 import { Box, Button, Flex, Icon, Stack, Text } from "@chakra-ui/react";
-import { User } from "@firebase/auth";
+import { User } from "firebase/auth";
 import moment from "moment";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import CommunitySettingsModal from "../Modal/CommunitySettings/CommunitySettings";
+import { isAdmin } from "../utils/authUtils";
 
 /**
  * @param {string} communityName - Name of the community
@@ -153,13 +154,15 @@ const AdminSectionAbout: React.FC<AdminSectionAboutProps> = ({
             handleClose={() => setCommunitySettingsModalOpen(false)}
             communityData={communityData}
           />
-          <Button
-            width="100%"
-            variant={"outline"}
-            onClick={() => setCommunitySettingsModalOpen(true)}
-          >
-            Community Settings
-          </Button>
+          {isAdmin() && (
+            <Button
+              width="100%"
+              variant={"outline"}
+              onClick={() => setCommunitySettingsModalOpen(true)}
+            >
+              Community Settings
+            </Button>
+          )}
         </>
       )}
     </>
